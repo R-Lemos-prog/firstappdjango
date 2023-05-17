@@ -1,6 +1,6 @@
 # fly.toml file generated for testedjango on 2023-04-19T17:12:39-03:00
 
-app = "testedjango"
+app = "firstappdjango"
 kill_signal = "SIGINT"
 kill_timeout = 5
 mounts = []
