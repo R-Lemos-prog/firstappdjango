@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'collectfast',
     'django.contrib.staticfiles',
     'project.core',
 ]
@@ -129,8 +128,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-COLLECTFAST_ENABLED = False
-
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
 # ----------  STORAGE CONFIGURATION IN S3 AWS  -----------
@@ -143,9 +140,6 @@ if AWS_ACCESS_KEY_ID:
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
-
-    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
-    COLLECTFAST_ENABLED = True
 
     AWS_DEFAULT_ACL = 'private'
 
@@ -171,4 +165,4 @@ if AWS_ACCESS_KEY_ID:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTEDS_ORIGENS = ["https://firstappdjango.fly.dev/"]
+CSRF_TRUSTEDS_ORIGENS = ["https://firstappdjango.fly.dev"]
