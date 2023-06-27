@@ -50,10 +50,6 @@ jobs:
     - name: Setup .env
       run: cp .env.example .env
 
-    - name: Run Tests
-      run: |
-        python manage.py test
-
     - name: Test with pytest
       run: |
         pytest --cov=project
