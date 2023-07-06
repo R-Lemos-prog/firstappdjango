@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/twbs/bootstrap/releases/tag/v4.2.1
+HostUrl=https://objects.githubusercontent.com/github-production-release-asset-2e65be/2126244/ffc08980-050e-11e9-9c6b-50d95d36bed1?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230705%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230705T160414Z&X-Amz-Expires=300&X-Amz-Signature=a5b6fe1e7b262d8ce91036b97aa6d08da1e50c3d03c10a445f35bc0b3d9aa932&X-Amz-SignedHeaders=host&actor_id=62080076&key_id=0&repo_id=2126244&response-content-disposition=attachment%3B%20filename%3Dbootstrap-4.2.1-dist.zip&response-content-type=application%2Foctet-stream
