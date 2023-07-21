@@ -1,40 +1,8 @@
+{% extends 'core/base.html' %}
 {%load static%}
-
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Python Pro</title>
-
-    <meta name="description" content="Página do curso Python Pro">
-    <meta name="author" content="Raiene Lemos">
-
-	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
-    <link href="{%static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{%static 'css/style.css' %}" rel="stylesheet">
-    <script src="{%static 'js/jquery.min.js' %}"></script>
-    <script src="{%static 'js/bootstrap.min.js' %}"></script>
-    <script src="{%static 'js/scripts.js' %}"></script>
-
-  </head>
-  <body>
-	<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-		<div class="container-fluid">
-		  <a class="navbar-brand" href="{% url 'core:home' %}">Python Pro</a>
-		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			</ul>
-		  </div>
-		</div>
-	</nav>
-	
-    <div class="container">
+<title>{% block title %}Python Pro - home{% endblock%}</title>
+{%block body%}
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="jumbotron">
@@ -64,12 +32,10 @@
 					<div class="col-auto mt-2">
 						<button type="submit" class="btn btn-primary mb-2">Enviar</button>
 					</div>
-
+					<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;fnames[1]=FNAME;ftypes[1]=merge;fnames[4]=PHONE;ftypes[4]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 				</form>
 			</div>
 
-		  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;fnames[1]=FNAME;ftypes[1]=merge;fnames[4]=PHONE;ftypes[4]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script></div>
-		  
 			<div class="row">
 				<div class="col-md-12 mt-3">
 					<div class="card">
@@ -88,28 +54,4 @@
 		</div>
 	</div>
 </div>
-	<footer class="main-footer mt-5 pt-4 text-light">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h3>Entre em contato</h3>
-					<address>
-						+55 31 98765-4321
-						<br/>
-						<a href="mailto:ramalho@python.pro.br" class="text-light">ramalho@python.pro.br</a>
-					</address>
-				</div>
-			</div>
-		</div>
-		<div class="rights pb-4 pt-2">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						{% now 'Y'%} Python Pro. Todos direitos reservados. 
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-  </body>
-</html>
+{%endblock%}
