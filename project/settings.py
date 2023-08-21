@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'project.aperitivos',
     'project.modulos',
     'ordered_model',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
