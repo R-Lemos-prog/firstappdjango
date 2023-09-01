@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'project.core',
     'project.aperitivos',
     'project.modulos',
+    'project.turmas',
     'ordered_model',
     'django_extensions',
 ]
