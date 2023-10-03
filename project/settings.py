@@ -35,20 +35,24 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'core.User'
 
+LOGIN_URL = '/contas/login/'
+LOGIN_REDIRECT_URL = '/modulos/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 
 INSTALLED_APPS = [
+    'project.core',
+    'project.aperitivos',
+    'project.modulos',
+    'project.turmas',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'project.core',
-    'project.aperitivos',
-    'project.modulos',
-    'project.turmas',
     'ordered_model',
     'django_extensions',
 ]

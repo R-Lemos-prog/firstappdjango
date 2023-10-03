@@ -20,6 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("contas/", include("django.contrib.auth.urls")),
     path("", include("project.core.urls")),
     path("aperitivos/", include("project.aperitivos.urls")),
     path("modulos/", include("project.modulos.urls")),

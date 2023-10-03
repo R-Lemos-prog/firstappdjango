@@ -1,39 +1,28 @@
-# fly.toml file generated for testedjango on 2023-04-19T17:12:39-03:00
+# fly.toml app configuration file generated for firstappdjango on 2023-10-03T20:10:29-03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
 app = "firstappdjango"
-kill_signal = "SIGINT"
-kill_timeout = 5
-mounts = []
-primary_region = "gig"
-processes = []
+primary_region = "gru"
+console_command = "/code/manage.py shell"
+
+[build]
+
+[deploy]
+  release_command = "python manage.py migrate"
 
 [env]
   PORT = "8000"
 
-[[services]]
+[http_service]
   internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
   processes = ["app"]
-  protocol = "tcp"
-  [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
-    type = "connections"
-
-  [[services.ports]]
-    force_https = true
-    handlers = ["http"]
-    port = 80
-
-  [[services.ports]]
-    handlers = ["tls", "http"]
-    port = 443
-
-  [[services.top_checks]]
-    grace_period = "1s"
-    interval = "1s"
-    restart_limit = 0
-    timeout = "2s"
 
 [[statics]]
-  guest_path = "/app/public"
+  guest_path = "/code/static"
   url_prefix = "/static/"
