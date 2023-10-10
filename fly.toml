@@ -1,16 +1,16 @@
-# fly.toml app configuration file generated for firstappdjango on 2023-10-03T20:10:29-03:00
+# fly.toml app configuration file generated for victor-test-django-app on 2023-10-10T07:31:48-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "firstappdjango"
+app = "victor-test-django-app"
 primary_region = "gru"
 console_command = "/code/manage.py shell"
 
 [build]
 
 [deploy]
-  release_command = "python manage.py migrate"
+  release_command = "./start.sh"
 
 [env]
   PORT = "8000"
